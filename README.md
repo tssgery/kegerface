@@ -6,6 +6,10 @@ As of now, the database muct be maipulated by hand (via cli or phpMyAdmin) but I
 
 read the INSTRUCTIONS.md file for installation instructions.
 
+Screenshot(s):
+
+![Main Page](screenshot.jpg "Main Page")
+
 Credits
 
 a) Beer Labelizer: http://www.beerlabelizer.com
