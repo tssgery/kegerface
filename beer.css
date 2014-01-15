@@ -1,0 +1,118 @@
+body
+{
+	font-family: 'Argo', serif;
+	background: #002236 url(../kegerface/images/background_.jpg) ;
+
+}
+
+a {
+	text-decoration: none;
+	border: none;
+}
+
+
+h1
+{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size:300%;
+	font-weight: normal;
+	color:#FFF
+
+
+}
+
+ol
+{
+	margin:0;
+	padding: 0 1.5em;
+}
+
+table
+{
+	color:#FFF;
+/*	background:#2483A6;
+*/
+	border-collapse:collapse;
+	width:900px;
+/*	border:5px solid #C1DAD7;*/
+}
+
+thead
+{
+
+}
+
+thead th
+{
+	padding:1em 1em .5em;
+ 	border-bottom:1px dotted #FFF;
+ 	font-size:120%;
+ 	text-align:left;
+}
+
+
+
+thead tr
+{
+
+}
+
+td
+{
+/*	font-family: 'Argo', serif;*/
+	padding:.5em 1em;
+}
+
+h2
+{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size:150%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	color:#FFF
+
+}
+
+tbody tr.odd td
+{
+	background:transparent url(tr_bg.png) repeat top left;
+}
+
+tfoot
+{
+
+}
+
+tfoot td
+{
+
+	padding-bottom:1.5em;
+}
+
+tfoot tr
+{
+
+}
+
+
+* html tr.odd td
+{
+	background:#C00;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='tr_bg.png', sizingMethod='scale');
+}
+
+/*
+#middle
+{
+	background-color:#005875;
+}
+*/
+
+img.aligncenter {
+	margin: 0px auto;
+}
