@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="beer.css">
 </head>
 <body>
-<h1><p align='center'><img src='kegerator.png' </img></h1></p>
+<h1><p align='center'>::: Eric's Kegerator :::</h1></p>
 	
 <?php 
 $db_host = 'localhost';
