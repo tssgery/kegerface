@@ -63,10 +63,10 @@ while($row = mysql_fetch_array($result))
   echo "<td align='center'><h2>" . $row['Tap'] . "</h2></td>";
   echo "<td><h2>" . $row['Beer'] . "</h2></td>";
   echo "<td>" . $row['Brewery'] . "</td>";
-  echo "<td>" . $row['Style'] . "</td>";
+  echo "<td><h2>" . $row['Style'] . "</h2></td>";
   echo "<td>" . $row['ABV'] . "</td>";
-  echo "<td><img src='images/" . $row['Hops'] . " Hops.png' width='200'</td>";
-  echo "<td><img src='images/SRM "	.	$row['Color']	.	".png' height='75'</td>";
+  echo "<td><img height='95' width='auto'  src='images/" . $row['Hops'] . " Hops - new.png' width='200'</td>";
+  echo "<td><img height='70' width='auto' src='images/SRM "	.	$row['Color']	.	".png' height='75'</td>";
   echo "</tr>";
   
   }
