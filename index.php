@@ -31,7 +31,8 @@ $result = mysql_query("SELECT
         Beer.Style,
         Beer.ABV,
         Beer.Hops,
-        Beer.SRM as Color
+        Beer.SRM as Color,
+        Beer.Description
 FROM    Beer
 WHERE   Tap > 0 
 GROUP BY Beer.Tap, 
@@ -40,7 +41,8 @@ GROUP BY Beer.Tap,
         Beer.Style, 
         Beer.ABV, 
         Beer.Hops, 
-        Beer.SRM
+        Beer.SRM,
+        Beer.Description
 ORDER BY Tap ASC
 ");
 if (!$result) {    
@@ -50,10 +52,13 @@ $fields_num = mysql_num_fields($result);
 echo "<table align='center'><thead>";
 
 // printing table headers
-for($i=0; $i<$fields_num; $i++)
-{    $field = mysql_fetch_field($result);
-    echo "<th>{$field->name}</th>";
-}
+echo "<th>Tap</th>";
+echo "<th>Beer</th>";
+echo "<th>Style</th>";
+echo "<th>ABV</th>";
+echo "<th>Hops</th>";
+echo "<th>Color</th>";
+echo "<th>Description</th>";
 echo "</thead>\n";
 
 
@@ -61,13 +66,13 @@ while($row = mysql_fetch_array($result))
   
 {
   echo "<tr>";
-  echo "<td align='center'><h2>" . $row['Tap'] . "</h2></td>";
-  echo "<td><h2>" . $row['Beer'] . "</h2></td>";
-  echo "<td>" . $row['Brewery'] . "</td>";
-  echo "<td><h2>" . $row['Style'] . "</h2></td>";
+  echo "<td class='tap'><h2>" . $row['Tap'] . "</h2></td>";
+  echo "<td><h3>" . $row['Brewery'] . "\n" . $row['Beer'] . "</h3></td>";
+  echo "<td><h3>" . $row['Style'] . "</h3></td>";
   echo "<td>" . $row['ABV'] . "</td>";
   echo "<td><img height='95' width='auto'  src='images/" . $row['Hops'] . " Hops - new.png' width='200'</td>";
   echo "<td><img height='70' width='auto' src='images/SRM "	.	$row['Color']	.	".png' height='75'</td>";
+  echo "<td>" . $row['Description'] . "</td>";
   echo "</tr>";
   
   }
