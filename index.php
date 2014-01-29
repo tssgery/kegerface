@@ -67,7 +67,7 @@ while($row = mysql_fetch_array($result))
 {
   echo "<tr>";
   echo "<td class='tap'><h2>" . $row['Tap'] . "</h2></td>";
-  echo "<td><h3>" . $row['Brewery'] . "\n" . $row['Beer'] . "</h3></td>";
+  echo "<td class='beer'><h3>" . $row['Brewery'] . "\n" . $row['Beer'] . "</h3></td>";
   echo "<td><h3>" . $row['Style'] . "</h3></td>";
   echo "<td>" . $row['ABV'] . "</td>";
   echo "<td><img height='95' width='auto'  src='images/" . $row['Hops'] . " Hops - new.png' width='200'</td>";

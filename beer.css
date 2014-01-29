@@ -69,9 +69,15 @@ td
 
 .tap
 {
-	font-family: 'Argo', serif;
 	padding:.5em 1em;
         vertical-align: middle;
+}
+
+.beer
+{
+	padding:.5em 1em;
+        vertical-align: middle;
+        white-space:pre;
 }
 
 h2
