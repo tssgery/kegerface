@@ -30,7 +30,7 @@ $result = mysql_query("SELECT
         Beer.Brewery,
         Beer.Style,
         Beer.ABV,
-        Beer.Hops,
+        Beer.IBU,
         Beer.SRM as Color,
         Beer.Description
 FROM    Beer
@@ -40,7 +40,7 @@ GROUP BY Beer.Tap,
         Beer.Brewery, 
         Beer.Style, 
         Beer.ABV, 
-        Beer.Hops, 
+        Beer.IBU, 
         Beer.SRM,
         Beer.Description
 ORDER BY Tap ASC
@@ -63,14 +63,14 @@ echo "</thead>\n";
 
 
 while($row = mysql_fetch_array($result))
-  
 {
+  $hops = intval($row['IBU']/25);
   echo "<tr>";
   echo "<td class='tap'><h2>" . $row['Tap'] . "</h2></td>";
   echo "<td class='beer'><h3>" . $row['Brewery'] . "\n" . $row['Beer'] . "</h3></td>";
   echo "<td><h3>" . $row['Style'] . "</h3></td>";
   echo "<td>" . $row['ABV'] . "</td>";
-  echo "<td><img height='95' width='auto'  src='images/" . $row['Hops'] . " Hops - new.png' width='200'</td>";
+  echo "<td><img height='95' width='auto'  src='images/" . $hops . " Hops - new.png' width='200'</td>";
   echo "<td><img height='70' width='auto' src='images/SRM "	.	$row['Color']	.	".png' height='75'</td>";
   echo "<td>" . $row['Description'] . "</td>";
   echo "</tr>";
