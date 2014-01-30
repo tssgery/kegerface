@@ -70,7 +70,7 @@ while($row = mysql_fetch_array($result))
   echo "<td class='beer'><h3>" . $row['Brewery'] . "\n" . $row['Beer'] . "</h3></td>";
   echo "<td><h3>" . $row['Style'] . "</h3></td>";
   echo "<td>" . $row['ABV'] . "</td>";
-  echo "<td><img height='95' width='auto'  src='images/" . $hops . " Hops - new.png' width='200'</td>";
+  echo "<td><img height='95' width='auto'  src='images/" . $hops . " Hops.png' width='200'</td>";
   echo "<td><img height='70' width='auto' src='images/SRM "	.	$row['Color']	.	".png' height='75'</td>";
   echo "<td>" . $row['Description'] . "</td>";
   echo "</tr>";
